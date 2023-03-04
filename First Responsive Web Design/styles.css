@@ -1,0 +1,180 @@
+/* GENERAL BODY FORMAT */
+body {
+    background-color: rgb(24, 24, 24);
+    color: orange;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    margin: 0px;
+    padding: 0px;
+}
+
+/*------------------ HEADER */
+
+/* GENERAL FORMAT */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    margin: 0px;
+    border: 0px;
+}
+
+/* LOGO FORMATING */
+#logo {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/* ABOUT FORMATTING */
+#about ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+#about ul li {
+    padding: 0px 10px;
+}
+
+#about ul li a {
+    color: orange;
+    text-decoration: none;
+}
+
+#about ul li a:hover {
+    background-color: orange;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+/* ---------------STYLING THE MAIN BODY */
+
+/* the title */
+main h1 {
+    font-size: 2.5rem;
+    margin-top: 100px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* the image */
+main ul li img {
+    height: 220px;
+    width: 280px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Both items */
+main ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    margin: auto;
+}
+
+main ul li {
+    margin: auto;
+    list-style: none;
+    text-align: center;
+    background-color: antiquewhite;
+    border-radius: 6px;
+    height: 370px;
+}
+
+main ul li a {
+    color: white;
+    text-decoration: none;
+    background-color: orange;
+    padding: 3px 5px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px black;
+}
+
+main ul li a:hover {
+    background-color: rgb(226, 14, 14);
+    box-shadow: 2px 3px 5px black;
+}
+
+/*  */
+#side-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#side-bar ul {
+    text-align: center;
+    margin: 100px;
+}
+
+#side-bar ul li {
+    list-style: none;
+    padding: 20px;
+}
+
+#side-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+#side-bar:target {
+    display: block;
+}
+
+#hamburger a {
+    height: 2rem;
+    width: 30px;
+    margin: auto 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#hamburger a span {
+    height: 4px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+#hamburger a {
+    color: white;
+    text-decoration: none;
+}
+#hamburger{
+    display: none;
+}
+
+/*  */
+@media(max-width:660px) {
+
+    /* HEADER */
+    #logo {
+        font-size: 1.2rem;
+    }
+
+    #about {
+        display: none;
+    }
+
+    #hamburger {
+        display: flex;
+    }
+
+    /* MAIN */
+    main ul {
+        grid-template-columns: 100%;
+        gap: 20px;
+    }
+
+}
